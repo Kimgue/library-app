@@ -43,7 +43,7 @@ public class UserServiceV2 {
                 .orElseThrow(IllegalArgumentException::new);
 
        user.updateName(request.getName());
-       userRepository.save(user); //영속성컨텍스트 기능으로 변경감지해서 save 를 하지않아도 자동 자정된다
+
     }
     @Transactional
     public void deleteUser(String name){
